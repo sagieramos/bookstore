@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <img src="Screenshot.png" alt="overview" width="auto"  height="auto" />
+  <br/>
 
-## Available Scripts
+  <h3><b>bookstore</b></h3>
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+# 📗 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Fullstack Development ](#-fullstack-development-)
+    - ["Bookstore" is a Single Page App (SPA) that allows you to save books:](#bookstore-is-a-single-page-app-spa-that-allows-you-to-save-books)
+  - [🛠  Built With ](#--built-with-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ ](#-faq-)
+  - [📝 License ](#-license-)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# 📖 Fullstack Development <a name="bookstore"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### "Bookstore" is a Single Page App (SPA) that allows you to save books:
 
-### `npm run build`
+## 🛠  Built With <a name="built-with"></a>
+- HTML
+- CSS
+- JavaScript
+- React
+### Key Features <a name="key-features"></a>
+- Created components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💻 Getting Started <a name="getting-started"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+In order to run this project you need:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone this repository to your desired folder:
+```sh
+  git clone https://github.com/sagieramos/bookstore $HOME
+```
+### Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run the project, execute the following command:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+  cd $HOME/bookstore
+  npm install
+  npm run build
+  npm run start
+```
 
-## Learn More
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👥 Authors <a name="authors"></a>
+👤 ***Stanley Osagie Ramos**
+- GitHub: [@sagieramos](https://github.com/sagieramos)
+- Twitter: [@sagieramos](https://twitter.com/sagieramos)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/sagieramos)
 
-### Code Splitting
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## 🔭 Future Features <a name="future-features"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [ ] **Make API calls**
 
-### Making a Progressive Web App
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contributing <a name="contributing"></a>
 
-### Advanced Configuration
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Feel free to check the [issues page](https://github.com/sagieramos/bookstore/issues).
 
-### Deployment
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please consider subscribing to my GitHub account for updates and more projects
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+- Jehovah God
+- [Microverse Team](https://www.microverse.org/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ❓ FAQ <a name="faq"></a>
+
+- **Can I run this project run on Docker?**
+
+  - yes
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
