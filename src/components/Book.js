@@ -10,9 +10,9 @@ const Book = ({ book }) => (
       <h2>{book.title}</h2>
       <p>{book.author}</p>
       <div className="book-actions">
-        <button type="button" onClick={() => console.log('Comments clicked')}>Comments</button>
-        <button type="button" onClick={() => console.log('Remove clicked')}>Remove</button>
-        <button type="button" onClick={() => console.log('Edit clicked')}>Edit</button>
+        <button type="button">Comments</button>
+        <button type="button">Remove</button>
+        <button type="button">Edit</button>
       </div>
     </div>
     <div className="book-progress">
@@ -21,7 +21,7 @@ const Book = ({ book }) => (
     <div className="book-current-chapter">
       <h2>CURRENT CHAPTER</h2>
       <p>{book.chapter}</p>
-      <button type="button" onClick={() => console.log('Update progress clicked')}>Update progress</button>
+      <button type="button">Update progress</button>
     </div>
   </div>
 );

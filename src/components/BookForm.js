@@ -41,7 +41,7 @@ const BookForm = ({ onAddBook }) => {
           <option value="Non-Fiction">Non-Fiction</option>
           <option value="Science Fiction">Science Fiction</option>
         </select>
-        <button type="submit" onClick={() => console.log('Add book clicked')}>Add Book</button>
+        <button type="submit">Add Book</button>
       </form>
     </div>
   );

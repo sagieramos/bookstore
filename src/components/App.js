@@ -5,13 +5,14 @@ import {
 import NotFound from './NotFound';
 import BookList from './BookList';
 import NavLinks from './NavLinks';
+import Categories from './Categories';
 
 const App = () => (
   <BrowserRouter>
     <NavLinks />
     <Routes>
       <Route path="/" element={<BookList />} />
-      <Route path="/categories" element={<div id="comming-soon">Comming soon</div>} />
+      <Route path="/categories" element={<Categories />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
