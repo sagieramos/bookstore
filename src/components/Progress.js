@@ -31,14 +31,17 @@ const Progress = ({
           }}
         />
       </svg>
-      <div className="progress-value">
-        {showCompletedText && (
-        <p>
-          {progress}
-          %
-        </p>
-        )}
-        {showCompletedText && <span>Completed</span>}
+      <div className="progress-container">
+        <div className="progress-value" />
+        <div>
+          {showCompletedText && (
+          <p>
+            {progress}
+            %
+          </p>
+          )}
+          {showCompletedText && <span>Completed</span>}
+        </div>
       </div>
     </div>
   );

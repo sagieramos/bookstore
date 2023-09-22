@@ -2,8 +2,9 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Book from './Book';
 import BookForm from './BookForm';
+import './BookList.scss';
 
-function BookList() {
+const BookList = () => {
   const books = [
     {
       title: 'The Catcher in the Rye',
@@ -40,6 +41,6 @@ function BookList() {
       </div>
     </div>
   );
-}
+};
 
 export default BookList;
