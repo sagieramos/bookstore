@@ -1,38 +1,17 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-
-const BookForm = ({ onAddBook }) => {
-  const [title, setTitle] = useState('');
-  const [category, setCategory] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (title && category) {
-      const newBook = {
-        title,
-        category,
-      };
-
-      onAddBook(newBook);
-      setTitle('');
-      setCategory('');
-    }
-  };
-
-  return (
+const BookForm = () => {
+  (
     <div className="book-input">
       <h2>Add a New Book</h2>
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           type="text"
           placeholder="Book Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value=""
+          onChange={(e) => (e.target.value)}
         />
         <select
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
+          value=""
+          onChange={(e) => (e.target.value)}
         >
           <option value="" disabled>
             Select Category
@@ -45,10 +24,6 @@ const BookForm = ({ onAddBook }) => {
       </form>
     </div>
   );
-};
-
-BookForm.propTypes = {
-  onAddBook: PropTypes.func.isRequired,
 };
 
 export default BookForm;
