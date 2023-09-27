@@ -2,14 +2,20 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
+import './BookForm.scss';
 
 const BookForm = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
 
   const handleTitle = (e) => {
     setTitle(e.target.value);
+  };
+
+  const handleAuthor = (e) => {
+    setAuthor(e.target.value);
   };
 
   const handleCategory = (e) => {
@@ -23,13 +29,14 @@ const BookForm = () => {
       const newBook = {
         item_id: uuidv4(),
         title,
-        author: 'Microverse',
+        author,
         category,
       };
 
       dispatch(addBook(newBook));
 
       setTitle('');
+      setAuthor('');
       setCategory('');
     }
   };
@@ -45,6 +52,12 @@ const BookForm = () => {
           placeholder="Book Title"
           value={title}
           onChange={handleTitle}
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          value={author}
+          onChange={handleAuthor}
         />
         <select
           value={category}

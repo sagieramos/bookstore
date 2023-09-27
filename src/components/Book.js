@@ -33,17 +33,16 @@ const Book = ({ book }) => {
         <article>
           <h2>
             {progress}
-            {' '}
             %
           </h2>
-          <h4>Completed</h4>
+          <p>Completed</p>
         </article>
       </div>
       <div className="book-current-chapter">
         <h2>CURRENT CHAPTER</h2>
         <p>
           chapter
-          {` ${Math.floor(Math.random() * 12)}`}
+          {` ${Math.floor(Math.random() * 12) + 1}`}
         </p>
         <button type="button">Update progress</button>
       </div>
