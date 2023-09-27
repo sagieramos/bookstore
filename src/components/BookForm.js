@@ -34,7 +34,7 @@ const BookForm = () => {
     }
   };
 
-  const isFormValid = !!category; // Check if a category is selected
+  const isFormValid = !!category;
 
   return (
     <div className="book-input">
