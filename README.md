@@ -37,8 +37,15 @@
 - JavaScript
 - React
 ### Key Features <a name="key-features"></a>
-- Created components
+- - Added a `<Button>` component, which includes:
+  - An event handler that **adds** a book to the `books` array (with attributes _id_, _title_ and _author_)
+- Added a `<Button>` component, which includes:
+  - An event handler that **removes** a book from the `books` array (by _id_)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+- [Live Demo Link](https://bookstore-vpig.onrender.com)
+<!--  -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
