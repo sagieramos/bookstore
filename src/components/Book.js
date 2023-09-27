@@ -29,7 +29,10 @@ const Book = ({ book }) => {
       </div>
       <div className="book-current-chapter">
         <h2>CURRENT CHAPTER</h2>
-        <p>{Math.floor(Math.random() * 12)}</p>
+        <p>
+          chapter
+          {` ${Math.floor(Math.random() * 12)}`}
+        </p>
         <button type="button">Update progress</button>
       </div>
     </div>
