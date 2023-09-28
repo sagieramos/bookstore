@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
 import BookForm from './BookForm';
@@ -7,11 +7,16 @@ import './BookList.scss';
 
 const BookList = () => {
   const books = useSelector((store) => store.book.books);
+  const statusFetch = useSelector((store) => store.book.statusFetch);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);
+
+  if (statusFetch === 'loading') {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>

@@ -33,7 +33,7 @@ const BookForm = () => {
         category,
       };
 
-      await dispatch(addBookAsync(newBook));
+      dispatch(addBookAsync(newBook));
 
       setTitle('');
       setAuthor('');

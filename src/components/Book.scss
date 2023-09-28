@@ -27,6 +27,7 @@
 }
 
 .book-container {
+  position: relative;
   display: flex;
   margin-bottom: 16px;
   background-color: #fff;
@@ -35,6 +36,11 @@
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
+
+  .indicator {
+    position: absolute;
+    bottom: 0;
+  }
 
   .book-header {
     display: flex;

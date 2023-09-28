@@ -7,7 +7,19 @@ const baseUrl = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/book
 export const fetchBooks = createAsyncThunk('books/fetchBooks', async (_, { rejectWithValue }) => {
   try {
     const res = await axios.get(baseUrl);
-    return res.data;
+    const resData = res.data;
+    if (resData === '') return [];
+
+    const arrayOfItems = Object.keys(resData).map((key) => {
+      const item = resData[key][0];
+      return {
+        itemId: key,
+        author: item.author,
+        title: item.title,
+        category: item.category,
+      };
+    });
+    return arrayOfItems;
   } catch (error) {
     return rejectWithValue('Failed to fetch books');
   }
@@ -24,8 +36,8 @@ export const addBookAsync = createAsyncThunk('books/addBook', async (newBook, { 
 
 export const removeBookAsync = createAsyncThunk('books/removeBook', async (itemId, { rejectWithValue }) => {
   try {
-    const res = await axios.delete(`${baseUrl}/${itemId}`);
-    return res.data;
+    await axios.delete(`${baseUrl}/${itemId}`);
+    return itemId;
   } catch (error) {
     return rejectWithValue('Failed to remove book');
   }
@@ -72,7 +84,7 @@ const booksSlice = createSlice({
       })
       .addCase(removeBookAsync.fulfilled, (state, action) => {
         state.statusRemove = 'succeeded';
-        state.books = state.books.filter((book) => book.item_id !== action.payload);
+        state.books = state.books.filter((book) => book.itemId !== action.payload);
       });
   },
 });
