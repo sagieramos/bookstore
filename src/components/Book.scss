@@ -1,11 +1,15 @@
 $blue: #0290ff;
 
+h2 {
+  color: #555;
+}
+
 .book-current-chapter {
   h2 {
     font-size: 14px;
-    font-weight: bold;
     margin-bottom: 4px;
     color: #a7a7a7;
+    font-weight: 500;
   }
 
   p {
@@ -53,18 +57,23 @@ $blue: #0290ff;
     margin-bottom: 10px;
 
     h3 {
-      font-size: 14px;
-      color: #555;
+      font-size: 0.9rem;
+      color: #a7a7a7;
+      margin: 0;
+      margin-bottom: 8px;
+      font-weight: 600;
     }
 
     h2 {
       font-size: 18px;
       font-weight: bold;
+      margin: 0;
+      margin-bottom: 4px;
     }
 
     p {
       font-size: 14px;
-      color: #777;
+      color: #3fa8f8;
       margin-top: 0;
     }
 
@@ -105,5 +114,11 @@ $blue: #0290ff;
         margin: 0;
       }
     }
+  }
+}
+
+form {
+  select {
+    color: #777;
   }
 }
