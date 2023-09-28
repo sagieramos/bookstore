@@ -39,8 +39,11 @@ export const addBookAsync = createAsyncThunk('books/addBook', async (newBook, { 
 
 export const removeBookAsync = createAsyncThunk('books/removeBook', async (itemId, { rejectWithValue }) => {
   try {
-    await axios.delete(`${baseUrl}/${itemId}`);
-    return itemId;
+    const res = await axios.delete(`${baseUrl}/${itemId}`);
+    if (res.status === 201) {
+      return itemId;
+    }
+    return rejectWithValue('Failed to remove book');
   } catch (error) {
     return rejectWithValue('Failed to remove book');
   }
