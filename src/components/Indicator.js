@@ -14,7 +14,12 @@ const Indicator = ({ isVisible }) => (
   />
 );
 
-Indicator.propTypes = {
-  isVisible: PropTypes.bool.isRequired,
+Indicator.defaultProps = {
+  isVisible: true,
 };
+
+Indicator.propTypes = {
+  isVisible: PropTypes.bool,
+};
+
 export default Indicator;

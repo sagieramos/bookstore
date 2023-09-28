@@ -15,7 +15,7 @@ const Book = ({ book }) => {
   const dispatch = useDispatch();
 
   const handleRemove = async () => {
-    await dispatch(removeBookAsync(itemId));
+    dispatch(removeBookAsync(itemId));
   };
 
   return (

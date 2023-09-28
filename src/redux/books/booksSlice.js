@@ -28,7 +28,10 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async (_, { rejec
 export const addBookAsync = createAsyncThunk('books/addBook', async (newBook, { rejectWithValue }) => {
   try {
     const res = await axios.post(baseUrl, newBook);
-    return res.data;
+    if (res.status === 201) {
+      return newBook;
+    }
+    return rejectWithValue('Failed to add book');
   } catch (error) {
     return rejectWithValue('Failed to add book');
   }
@@ -61,6 +64,12 @@ const booksSlice = createSlice({
     removeBook: (state, action) => {
       const itemToRemove = action.payload;
       return state.filter((book) => book.item_id !== itemToRemove);
+    },
+    resetStatus: (state) => {
+      state.statusFetch = 'idle';
+      state.statusAdd = 'idle';
+      state.statusRemove = 'idle';
+      state.error = null;
     },
   },
   extraReducers: (builder) => {
