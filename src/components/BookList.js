@@ -18,24 +18,21 @@ const BookList = () => {
 
   if (statusFetch === 'loading') {
     return <Indicator />;
-  }
-
-  if (statusFetch === 'succeeded') {
-    console.log(books);
-  }
-
-  return (
-    <div>
-      <div className="book-list">
-        {books.map((book) => (
-          <Book key={books.itemId || books.item_id || uuidv4()} book={book} />
-        ))}
-      </div>
+  } if (statusFetch === 'succeeded') {
+    return (
       <div>
-        <BookForm />
+        <div className="book-list">
+          {books.map((book) => (
+            <Book key={books.itemId || books.item_id || uuidv4()} book={book} />
+          ))}
+        </div>
+        <div>
+          <BookForm />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+  return <div>Failed to fetch data</div>;
 };
 
 export default BookList;
