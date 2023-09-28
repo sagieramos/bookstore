@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/booksSlice';
+import { addBookAsync } from '../redux/books/booksSlice';
 import './BookForm.scss';
 
 const BookForm = () => {
@@ -22,7 +22,7 @@ const BookForm = () => {
     setCategory(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (category) {
@@ -33,7 +33,7 @@ const BookForm = () => {
         category,
       };
 
-      dispatch(addBook(newBook));
+      dispatch(addBookAsync(newBook));
 
       setTitle('');
       setAuthor('');

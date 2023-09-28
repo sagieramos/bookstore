@@ -2,17 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { CircularProgressbar } from 'react-circular-progressbar';
-import { removeBook } from '../redux/books/booksSlice';
 import './Book.scss';
 import 'react-circular-progressbar/dist/styles.css';
+import { removeBookAsync } from '../redux/books/booksSlice';
 
 const Book = ({ book }) => {
   const {
-    item_id: itemId, title, author, category,
+    itemId, title, author, category,
   } = book;
 
   const progress = Math.floor(Math.random() * 101);
   const dispatch = useDispatch();
+
+  const handleRemove = async () => {
+    dispatch(removeBookAsync(itemId));
+  };
 
   return (
     <div className="book-container">
@@ -22,7 +26,7 @@ const Book = ({ book }) => {
         <p>{author}</p>
         <div className="book-actions">
           <button type="button">Comments</button>
-          <button type="button" onClick={() => dispatch(removeBook(itemId))}>Remove</button>
+          <button type="button" onClick={handleRemove}>Remove</button>
           <button type="button">Edit</button>
         </div>
       </div>
@@ -52,12 +56,10 @@ const Book = ({ book }) => {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    item_id: PropTypes.string.isRequired,
+    itemId: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
-    progress: PropTypes.number.isRequired,
-    chapter: PropTypes.string.isRequired,
   }).isRequired,
 };
 

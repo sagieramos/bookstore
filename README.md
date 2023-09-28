@@ -41,6 +41,7 @@
   - An event handler that **adds** a book to the `books` array (with attributes _id_, _title_ and _author_)
 - Added a `<Button>` component, which includes:
   - An event handler that **removes** a book from the `books` array (by _id_)
+- Use axios with createAsyncThunk to make your HTTP requests to the backend
 
 - [Live Demo Link](https://bookstore-vpig.onrender.com)
 

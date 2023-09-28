@@ -1,24 +1,38 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import Book from './Book';
 import BookForm from './BookForm';
+import { fetchBooks } from '../redux/books/booksSlice';
 import './BookList.scss';
+import Indicator from './Indicator';
 
 const BookList = () => {
-  const books = useSelector((store) => store.book);
+  const books = useSelector((store) => store.book.books);
+  const statusFetch = useSelector((store) => store.book.statusFetch);
+  const dispatch = useDispatch();
 
-  return (
-    <div>
-      <div className="book-list">
-        {books.map((book) => (
-          <Book key={book.item_id} book={book} />
-        ))}
-      </div>
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  if (statusFetch === 'loading') {
+    return <Indicator />;
+  } if (statusFetch === 'succeeded') {
+    return (
       <div>
-        <BookForm />
+        <div className="book-list">
+          {books.map((book) => (
+            <Book key={books.itemId || books.item_id || uuidv4()} book={book} />
+          ))}
+        </div>
+        <div>
+          <BookForm />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+  return <div>Failed to fetch data</div>;
 };
 
 export default BookList;
