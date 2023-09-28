@@ -8,7 +8,6 @@ const NavLinks = () => (
     <nav id="NavLinks">
       <ul>
         <h1>Bookstore CMS</h1>
-
         <NavMenuItem to="./">Books</NavMenuItem>
         <NavMenuItem to="/categories">Categories</NavMenuItem>
       </ul>

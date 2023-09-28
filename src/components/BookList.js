@@ -17,7 +17,7 @@ const BookList = () => {
   }, [dispatch]);
 
   if (statusFetch === 'loading') {
-    return <Indicator />;
+    return <div className="loading"><Indicator /></div>;
   } if (statusFetch === 'succeeded') {
     return (
       <div>
