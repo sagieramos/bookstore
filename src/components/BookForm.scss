@@ -1,15 +1,17 @@
 .book-input {
-  box-sizing: border-box;
   border-top: 1px solid #e0e0e0;
-  padding: 20px;
+  padding-top: 20px;
   border-radius: 5px;
   max-width: 1400px;
   margin: 0 auto;
   margin-bottom: 50px;
   min-width: 480px;
+  width: 90%;
 
   h2 {
     font-size: 16px;
+    margin: 5px;
+    margin-bottom: 16px;
     color: #555;
     text-transform: uppercase;
   }
@@ -38,6 +40,7 @@
 
   button[type="submit"] {
     background-color: #007bff;
+    margin: 5px;
     color: #fff;
     border: none;
     padding: 10px 40px;
