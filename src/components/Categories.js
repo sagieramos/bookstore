@@ -1,8 +1,13 @@
 import React from 'react';
+import './categories.scss';
+import Indicator from './Indicator';
 
 const Categories = () => (
-  <div>
-    <h2>Under Construction</h2>
+  <div id="categories">
+    <div>
+      <Indicator />
+      <h2>Under Construction</h2>
+    </div>
   </div>
 );
 

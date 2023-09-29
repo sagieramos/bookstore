@@ -42,6 +42,7 @@ const Book = ({ book }) => {
           <p>Completed</p>
         </article>
       </div>
+      <div className="vl" />
       <div className="book-current-chapter">
         <h2>CURRENT CHAPTER</h2>
         <p>

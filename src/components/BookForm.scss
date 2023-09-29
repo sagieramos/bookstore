@@ -1,16 +1,17 @@
 .book-input {
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 1400px;
   margin: 0 auto;
   margin-bottom: 50px;
+  min-width: 480px;
+  width: 90%;
 
   h2 {
     font-size: 16px;
+    margin: 5px;
+    margin-bottom: 16px;
     color: #555;
     text-transform: uppercase;
   }
@@ -27,9 +28,10 @@
     flex: 1;
     padding: 10px;
     margin: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
     font-size: 16px;
+    background-color: #fff;
   }
 
   select {
@@ -38,11 +40,12 @@
 
   button[type="submit"] {
     background-color: #007bff;
+    margin: 5px;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
+    padding: 10px 40px;
+    border-radius: 2px;
+    font-size: 0.9rem;
     cursor: pointer;
   }
 }
